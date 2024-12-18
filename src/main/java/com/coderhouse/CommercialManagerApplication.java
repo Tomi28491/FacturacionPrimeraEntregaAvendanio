@@ -37,8 +37,12 @@ public class CommercialManagerApplication implements CommandLineRunner{
 			Producto producto5 = new Producto("TV", 4, 400000d);
 			
 			
+			
+			Venta venta1 = new Venta(2350000d, "Tarjeta Credito");
+			
+			
 
-	
+			
 			dao.persistirCliente(cliente1);
 			dao.persistirCliente(cliente2);
 			
@@ -47,6 +51,7 @@ public class CommercialManagerApplication implements CommandLineRunner{
 			dao.persistirProducto(producto3);
 			dao.persistirProducto(producto4);
 			dao.persistirProducto(producto5);
+			dao.persistirVenta(venta1);
 			
 
 			

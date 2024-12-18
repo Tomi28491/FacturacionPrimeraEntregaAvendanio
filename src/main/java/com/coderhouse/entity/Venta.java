@@ -27,7 +27,7 @@ public class Venta {
 	private LocalDateTime fecha;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_cliente", nullable = false)
+	@JoinColumn(name = "id_cliente")
 	private Cliente clie;
 	
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
@@ -49,10 +49,8 @@ public class Venta {
 	
 	
 
-	public Venta(Cliente clie, List<Producto> productos, double montoTotal, String metodoPago) {
+	public Venta(double montoTotal, String metodoPago) {
 		this();
-		this.clie = clie;
-		this.productos = productos;
 		this.montoTotal = montoTotal;
 		this.metodoPago = metodoPago;
 	}
